@@ -4,7 +4,6 @@ import StuffList from "../components/stuffList"
 
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 const tempStuff = [
   {
