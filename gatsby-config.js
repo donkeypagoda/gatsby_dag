@@ -30,8 +30,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        fieldName: 'dag_drupalend',
-        url: 'http://drupalapollogatsbypoc.lndo.site/',
+        typeName: "nodeQuery",
+        fieldName: 'graphql',
+        url: 'http://drupalapollogatsbypoc.lndo.site/graphql',
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

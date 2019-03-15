@@ -20,8 +20,8 @@ import Layout from "../components/layout"
 //   }
 // ]
 
-export const gastbySideQuery = graphql`
-  {
+export const query = graphql`
+  query {
     nodeQuery{
       entities{
         entityId
