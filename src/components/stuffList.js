@@ -1,16 +1,18 @@
 import React from 'react';
 
-// {
-//   stuffs.map(stuff =>
-//   <div key={stuff.id}>
-//     <div>{stuff.title}</div>
-//   </div>)
-// }
 
-const StuffList = ({stuffs}) => (
-  <div>
-    {stuffs.entities}
-  </div>
-);
+function StuffList(props){
+  console.log(props)
+  return (
+    <div>
+    {props.stuffs.map(stuff => (
+      <div key={stuff.id}>
+        <div>{stuff.title}</div>
+      </div>
+      )
+    )}
+    </div>
+  )
+};
 
 export default StuffList;

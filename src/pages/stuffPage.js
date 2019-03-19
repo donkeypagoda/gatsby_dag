@@ -1,10 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-// import StuffList from "../components/stuffList"
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag'
-import { graphql } from 'react-apollo';
-
+import StuffList from "../components/stuffList"
 import Layout from "../components/layout"
 
 const tempStuff = [
@@ -20,43 +16,12 @@ const tempStuff = [
   }
 ]
 
-// export const query = graphql`
-//   query {
-//     nodeQuery{
-//       entities{
-//         entityId
-//       }
-//     }
-//   }
-//
-// `;
 
-
-
-const Stuff = (tempStuff) => (
+const Stuff = () => (
   <Layout>
-    {tempStuff.map(stuff =>
-      <div>{stuff.title}</div>
-    )}
+    <StuffList stuffs={tempStuff} />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+);
 
 export default Stuff
-
-// <Query query={ap}>
-//   {({ data, loading }) => {
-//     if (loading) {
-//       return <span>Loading...</span>;
-//     }
-//     else if (!loading){
-//       console.log({data})
-//       return (
-//
-//           <div>stuff</div>
-//
-//       )
-//     }
-//     }
-//   }
-// </Query>
