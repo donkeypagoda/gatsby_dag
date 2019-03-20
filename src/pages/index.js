@@ -5,26 +5,26 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import ApolloClient from 'apollo-boost';
-import gql from 'graphql-tag'
+// import ApolloClient from 'apollo-boost';
+// import ApolloProvider from 'apollo-boost'
+// import gql from 'graphql-tag'
 
-const client = new ApolloClient({
-  uri: 'http://drupalapollogatsbypoc.lndo.site/graphql'
-});
+// const client = new ApolloClient({
+//   uri: 'http://drupalapollogatsbypoc.lndo.site/graphql'
+// });
 
-client
-  .query({
-    query: gql`
-        {
-      nodeQuery{
-        entities{
-          entityId
-        }
-      }
-    }
-    `
-  })
-  .then(result => console.log(result));
+// client.query({
+//   query: gql`
+//             {
+//           nodeQuery{
+//             entities{
+//               entityId
+//             }
+//           }
+//         }
+//         `
+//       }).then(result => console.log(result));
+
 
 
 
@@ -39,6 +39,7 @@ const IndexPage = () => (
         </div>
       <Link to="/stuffPage/">Go to Stuff Page</Link>
     </Layout>
+
 
 )
 
