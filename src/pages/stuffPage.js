@@ -1,37 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-// import StuffList from "../components/stuffList"
 import Layout from "../components/layout"
-
-// const tempStuff = [
-//   {
-//     id: 1,
-//     title: "some stuff"
-//   },{
-//     id: 2,
-//     title: "some more stuff"
-//   },{
-//     id: 3,
-//     title: "some other more stuff"
-//   }
-// ]
 
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-
-//
-// client.query({
-//   query: gql`
-//             {
-//           nodeQuery{
-//             entities{
-//               entityId
-//             }
-//           }
-//         }
-//         `
-//       }).then(result => console.log(result));
-
 
 const Stuff = () => (
 
@@ -69,19 +41,5 @@ const Stuff = () => (
   </Layout>
 
 );
-
-//
-// const Stuff = () => (
-//   <Layout>
-//   <div>
-//   {tempStuff.map(stuff => (
-//     <div key={stuff.id}>
-//       <div>{stuff.title}</div>
-//     </div>
-//   ))}
-//   </div>
-//     <Link to="/">Go back to the homepage</Link>
-//   </Layout>
-// );
 
 export default Stuff
