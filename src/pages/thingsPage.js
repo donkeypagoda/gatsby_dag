@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
-const Stuff = () => (
+const Things = () => (
 
   <Layout>
     <Query
@@ -13,7 +13,7 @@ const Stuff = () => (
         {
           nodeQuery {
              entities {
-              ...on NodeStuff {
+              ...on NodeThings {
                 id:entityId
                 title
               }
@@ -38,4 +38,4 @@ const Stuff = () => (
 
 );
 
-export default Stuff
+export default Things
