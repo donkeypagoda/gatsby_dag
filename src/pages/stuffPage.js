@@ -23,8 +23,8 @@ const Stuff = () => (
       `}
     >
       {({ loading, error, data }) => {
-        if (loading) return <p>Loading...</p>;
-        if (error) return <p>Error :(</p>;
+        if (loading) return <p>Firing up the overthrusters...</p>;
+        if (error) return <p>I no worky! Stuff borked!</p>;
 
         return data.nodeQuery.entities.map(({ id, title }) => (
           <div key={id}>
