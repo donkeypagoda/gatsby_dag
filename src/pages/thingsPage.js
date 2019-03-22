@@ -16,6 +16,16 @@ const Things = () => (
               ...on NodeThings {
                 id:entityId
                 title
+                body {
+                  value
+                }
+                fieldThingsImage{
+                  derivative (style: LARGE){
+                    width
+                    height
+                    url
+                  }
+                }
               }
             }
           }
@@ -25,12 +35,27 @@ const Things = () => (
       {({ loading, error, data }) => {
         if (loading) return <p>Kicking out the jamz...</p>;
         if (error) return <p>Uh oh, something marshed my hello...</p>;
-
-        return data.nodeQuery.entities.map(({ id, title }) => (
-          <div key={id}>
-            <h1>{title}</h1>
-          </div>
-        ));
+        if (data) {
+          console.log(data)
+          return data.nodeQuery.entities.filter( node => {
+            if (node.__typename === "NodeStuff") {
+              return false;
+            }
+            else {
+              return true;
+            }
+          }).map( thing  => (
+            <div key={thing.id}>
+              <div>
+                <h1>{thing.title}</h1>
+              </div>
+                <div dangerouslySetInnerHTML={{__html: thing.body.value}} />
+              <div>
+                <img src={thing.fieldThingsImage.derivative.url} />
+              </div>
+            </div>
+          ));
+        }
       }}
     </Query>
     <Link to="/">Back to Home Page</Link>
