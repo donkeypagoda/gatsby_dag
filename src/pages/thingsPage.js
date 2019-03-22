@@ -11,7 +11,11 @@ const Things = () => (
     <Query
       query={gql`
         {
-          nodeQuery {
+          nodeQuery (
+            sort: [{
+          		field: "created"
+          		direction: DESC
+        		}]){
              entities {
               ...on NodeThings {
                 id:entityId
@@ -20,6 +24,7 @@ const Things = () => (
                   value
                 }
                 fieldThingsImage{
+                  alt
                   derivative (style: LARGE){
                     width
                     height
@@ -51,7 +56,7 @@ const Things = () => (
               </div>
                 <div dangerouslySetInnerHTML={{__html: thing.body.value}} />
               <div>
-                <img src={thing.fieldThingsImage.derivative.url} />
+                <img alt={thing.fieldThingsImage.alt} src={thing.fieldThingsImage.derivative.url} />
               </div>
             </div>
           ));
