@@ -11,8 +11,16 @@ const IndexPage = () => (
       <SEO title="Home" keywords={[`gatsby`, `apollo`, `decoupled`, `drupal`]} />
       <h1>Yet another POC of De-coupled Drupal + Gatsby.</h1>
       <p>It uses the GraphQL module on the Drupal side, then uses the Apollo client plugin in Gatsby on the frontend.</p>
-        <div style={{ maxWidth: `500px`, marginBottom: `1.45rem`, alignContent: `center` }}>
+        <div style={{
+                maxWidth: `500px`,
+                marginBottom: `.5rem`,
+                marginLeft: `auto`,
+                marginRight: `auto`
+              }}>
         <Image />
+        </div>
+        <div style={{textAlign: `center`, marginBottom: `2rem`}}>
+        <p>The WaterMonster is right CatMan, GraphQL is a beast!</p>
         </div>
       <div>
         <ul>

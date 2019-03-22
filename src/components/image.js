@@ -27,8 +27,8 @@ const Image = () => (
       }
     `}
     render={data =>
-      <div style={{ display: `block`, border: `1px solid blue`, alignContent: `center`}}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      <div>
+        <Img style={{ display: `block`, margin: `0 auto`}} fluid={data.placeholderImage.childImageSharp.fluid} />
       </div>
     }
   />
