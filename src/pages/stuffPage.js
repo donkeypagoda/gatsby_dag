@@ -45,12 +45,19 @@ const Stuff = () => (
         if (error) return <p>I no worky! Stuff borked!</p>;
         if (data) {
           console.log(data)
-          return data.nodeQuery.entities.map( stuff  => (
+          return data.nodeQuery.entities.filter( node => {
+            if (node.__typename === "NodeThings") {
+              return false;
+            }
+            else {
+              return true;
+            }
+          }).map( stuff  => (
             <div key={stuff.id}>
               <div>
                 <h1>{stuff.title}</h1>
               </div>
-                <div dangerouslySetInnerHTML={{ __html: stuff.body.value}} />
+                <div dangerouslySetInnerHTML={{__html: stuff.body.value}} />
               <div>
               </div>
             </div>

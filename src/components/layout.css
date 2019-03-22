@@ -236,7 +236,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
-  text-align: center;
+
 }
 h2 {
   margin-left: 0;
@@ -615,6 +615,12 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+}
+picture > img {
+    display: block;
+    height: 100%;
+    width: auto;
+    vertical-align: bottom; /* <-- fix the vertical gap */
 }
 @media only screen and (max-width: 480px) {
   html {

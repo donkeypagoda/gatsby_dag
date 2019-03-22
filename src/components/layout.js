@@ -34,12 +34,21 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
-          <footer>
+          <main style={{marginBottom:`auto`}}>{children}</main>
+          <div style={{
+                        display: `flex`,
+                        marginTop: `auto`
+                      }}>
+          <footer style={{
+                          marginTop: `auto`,
+                          textAlign: `center`,
+                          flexGrow: `1`
+                        }}>
             {new Date().getFullYear()} by donkeypagoda, built using the
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby CLI tool.</a>
           </footer>
+          </div>
         </div>
       </>
     )}
