@@ -16,6 +16,24 @@ const Stuff = () => (
               ...on NodeStuff {
                 id:entityId
                 title
+                body {
+                  value
+                }
+                fieldStuffImage{
+                  derivative (style: LARGE){
+                    width
+                    height
+                    url
+                  }
+                  entity{
+                    filename
+                    entityId
+                    uri {
+                      value
+                      url
+                    }
+                  }
+                }
               }
             }
           }
@@ -25,12 +43,19 @@ const Stuff = () => (
       {({ loading, error, data }) => {
         if (loading) return <p>Firing up the overthrusters...</p>;
         if (error) return <p>I no worky! Stuff borked!</p>;
-
-        return data.nodeQuery.entities.map(({ id, title }) => (
-          <div key={id}>
-            <h1>{title}</h1>
-          </div>
-        ));
+        if (data) {
+          console.log(data)
+          return data.nodeQuery.entities.map( stuff  => (
+            <div key={stuff.id}>
+              <div>
+                <h1>{stuff.title}</h1>
+              </div>
+                <div dangerouslySetInnerHTML={{ __html: stuff.body.value}} />
+              <div>
+              </div>
+            </div>
+          ));
+        }
       }}
     </Query>
     <Link to="/">Back to Home Page</Link>
