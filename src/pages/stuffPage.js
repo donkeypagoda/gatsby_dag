@@ -25,14 +25,6 @@ const Stuff = () => (
                     height
                     url
                   }
-                  entity{
-                    filename
-                    entityId
-                    uri {
-                      value
-                      url
-                    }
-                  }
                 }
               }
             }
@@ -59,6 +51,7 @@ const Stuff = () => (
               </div>
                 <div dangerouslySetInnerHTML={{__html: stuff.body.value}} />
               <div>
+                <img src={stuff.fieldStuffImage.derivative.url} />
               </div>
             </div>
           ));
