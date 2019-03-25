@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import Img from "gatsby-image"
 
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
@@ -35,6 +36,7 @@ const Stuff = () => (
                     width
                     height
                     url
+                    
                   }
                 }
               }
