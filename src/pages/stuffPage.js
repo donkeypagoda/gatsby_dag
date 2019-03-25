@@ -15,7 +15,8 @@ const Stuff = () => (
             sort: [{
           		field: "changed"
           		direction: DESC
-        		}]){
+        		}]
+          ){
              entities {
               ...on NodeStuff {
                 id:entityId
