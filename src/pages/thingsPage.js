@@ -18,6 +18,7 @@ const Things = () => (
         		}]
           ){
              entities {
+              entityType:__typename
               ...on NodeThings {
                 id:entityId
                 title
