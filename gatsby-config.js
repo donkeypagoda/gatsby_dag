@@ -31,7 +31,7 @@ module.exports = {
       resolve: 'gatsby-source-graphql',
       options: {
         typeName: "drupalAPI",
-        fieldName: 'nodeQuery',
+        fieldName: 'dagGraphQL',
         url: 'http://drupalapollogatsbypoc.lndo.site/graphql',
       },
     }
