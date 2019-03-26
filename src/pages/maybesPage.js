@@ -47,5 +47,6 @@ export default ({data}) => (
         </div>
       ))}
     </div>
+    <Link to="/">Back to Home Page</Link>
   </Layout>
 );
