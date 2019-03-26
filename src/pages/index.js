@@ -26,6 +26,9 @@ const IndexPage = () => (
           <h2>Some other pages to look at:</h2>
             <ul>
               <li>
+                <Link to="/maybesPage/">Go to Maybes Page</Link>
+              </li>
+              <li>
                 <Link to="/stuffPage/">Go to Stuff Page</Link>
               </li>
               <li>
