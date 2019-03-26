@@ -38,15 +38,13 @@ export const Maybes_QUERY = graphql`
 
 export default ({data}) => (
   <Layout>
-    <div>
       {data.dagGraphQL.nodeQuery.entities.map(maybe => (
-        <div>
+        <div key={maybe.entityId}>
           <h1>{maybe.title}</h1>
           <div dangerouslySetInnerHTML={{__html:maybe.body.value}} />
           <img src={maybe.fieldMaybeimage.entity.url} alt={maybe.fieldMaybeimage.alt} />
         </div>
       ))}
-    </div>
     <Link to="/">Back to Home Page</Link>
   </Layout>
 );
