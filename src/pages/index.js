@@ -29,10 +29,10 @@ const IndexPage = () => (
                 <Link to="/maybesPage/">Go to Maybes Page</Link>
               </li>
               <li>
-                <Link to="/stuffPage/">Go to Stuff Page</Link>
+              <Link to="/thingsPage/">Go to Things Page</Link>
               </li>
               <li>
-                <Link to="/thingsPage/">Go to Things Page</Link>
+                <Link to="/stuffPage/">Go to Stuff Page</Link>
               </li>
             </ul>
         </div>
