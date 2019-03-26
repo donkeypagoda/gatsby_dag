@@ -35,7 +35,6 @@ export const Maybes_QUERY = graphql`
     }
 `
 
-
 export default ({data}) => (
   <Layout>
       {data.dagGraphQL.nodeQuery.entities.map(maybe => (
