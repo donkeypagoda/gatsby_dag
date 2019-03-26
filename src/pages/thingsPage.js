@@ -41,7 +41,7 @@ const Things = () => (
     >
       {({ loading, error, data }) => {
         if (loading) return <p>Kicking out the jamz...</p>;
-        if (error) return <p>Uh oh, something marshed my hello...</p>;
+        if (error) return <p>{error.message}</p>;
         if (data) {
           console.log(data)
           return data.nodeQuery.entities.filter( node => {

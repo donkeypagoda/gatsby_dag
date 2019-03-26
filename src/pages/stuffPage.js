@@ -36,7 +36,7 @@ const Stuff = () => (
                     width
                     height
                     url
-                    
+
                   }
                 }
               }
@@ -47,7 +47,7 @@ const Stuff = () => (
     >
       {({ loading, error, data }) => {
         if (loading) return <p>Firing up the overthrusters...</p>;
-        if (error) return <p>I no worky! Stuff borked!</p>;
+        if (error) return <p>{error.message}</p>;
         if (data) {
           console.log(data)
           return data.nodeQuery.entities.map( stuff  => (
