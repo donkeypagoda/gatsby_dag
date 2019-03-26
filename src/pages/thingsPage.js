@@ -45,7 +45,7 @@ const Things = () => (
         if (data) {
           console.log(data)
           return data.nodeQuery.entities.filter( node => {
-            if (node.__typename === "NodeStuff") {
+            if (node.__typename === "NodeStuff" || node.__typename === "NodeMaybes") {
               return false;
             }
             else {
