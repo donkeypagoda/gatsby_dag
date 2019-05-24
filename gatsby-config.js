@@ -32,7 +32,7 @@ module.exports = {
       options: {
         typeName: "drupalAPI",
         fieldName: 'dagGraphQL',
-        url: 'http://drupalapollogatsbypoc.lndo.site/graphql',
+        url: 'http://drupal-apollo-gatsby-poc.lndo.site/graphql',
       },
     }
   ],

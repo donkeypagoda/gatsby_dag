@@ -6,12 +6,16 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
 const Things = () => (
-
   <Layout>
     <Query
       query={gql`
         {
           nodeQuery (
+            filter: {
+              conditions: [{
+                field: "type"
+                value: "Things"
+              }]},
             sort: [{
           		field: "created"
           		direction: DESC
