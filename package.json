@@ -9,7 +9,7 @@
     "apollo-cache-inmemory": "^1.6.0",
     "apollo-client": "^2.6.0",
     "apollo-link-http": "^1.5.14",
-    "gatsby": "^2.7.1",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
